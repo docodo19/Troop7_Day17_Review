@@ -41,6 +41,7 @@ namespace Day17_Review.API
 
         public IHttpActionResult Post(Product product)
         {
+            product.Id = _products.Count + 1;
             if(!ModelState.IsValid)
             {
                 return BadRequest();
