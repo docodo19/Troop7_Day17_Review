@@ -26,3 +26,4 @@ var MyApp;
         angular.module("MyApp").service("productsService", ProductsService);
     })(Services = MyApp.Services || (MyApp.Services = {}));
 })(MyApp || (MyApp = {}));
+//# sourceMappingURL=ProductsService.js.map

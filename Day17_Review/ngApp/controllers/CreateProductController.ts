@@ -9,7 +9,9 @@
         }
 
         public createProduct() {
-            this.productsService.saveProduct(this.product).then(() => {
+            // call the saveProduct() method inside of the products Service
+            this.productsService.saveProduct(this.product).then((res) => {
+                console.log(res);
                 // go back to the '/products' route
                 this.$location.path('/products');
             }).catch(() => {

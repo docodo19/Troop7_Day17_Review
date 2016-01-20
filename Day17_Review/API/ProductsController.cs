@@ -48,7 +48,7 @@ namespace Day17_Review.API
             }
 
             _products.Add(product);
-            return Ok();
+            return Ok(product);
         }
 
     }

@@ -9,7 +9,9 @@ var MyApp;
             }
             CreateProductController.prototype.createProduct = function () {
                 var _this = this;
-                this.productsService.saveProduct(this.product).then(function () {
+                // call the saveProduct() method inside of the products Service
+                this.productsService.saveProduct(this.product).then(function (res) {
+                    console.log(res);
                     // go back to the '/products' route
                     _this.$location.path('/products');
                 }).catch(function () {
@@ -22,3 +24,4 @@ var MyApp;
         Controllers.CreateProductController = CreateProductController;
     })(Controllers = MyApp.Controllers || (MyApp.Controllers = {}));
 })(MyApp || (MyApp = {}));
+//# sourceMappingURL=CreateProductController.js.map
